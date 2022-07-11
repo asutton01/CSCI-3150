@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+
+/* form styling */
+
+body
+{
+    font-family: Helvetica, Sans-Serif;
+    color: black;
+    font-size: 12pt;
+    background-color: #FAFAFA;
+}
+
+
+#wrapper {
+	width: 60%;
+	margin-left:4%;
+}
+
+div#formcol1 {
+	float:left;	
+	width: 100%;
+}
+
+#formcol1 label{
+
+    text-align: right;
+ 
+    margin-right: .3em;
+    width: 6em;  /* I made this deliberately wide – come up with your own 
+    optimal width */
+    display: inline-block; /* width will not work for “inline” elements such as 
+    “label”. Therefore we need to set it to “inline-block” */
+}
+
+/* we place the id formcol1 in front of the li element in order to limit this 
+formatting to the top part of the form */
+#formcol1 li {   
+    list-style:none;
+}
+
+span {   width: auto;   margin-right: 20px; }
+
+select:focus, select:active, input:focus, input:active, input:focus + label, 
+input:active + label, label[for]:focus, label[for]:active {
+color: #FFF !important;
+background-color: #BB3D2F !important;}
+
+#formcol1 input.reqfield {
+    background:#FF9;
+    }
+
+
+
+/* end of form css */
