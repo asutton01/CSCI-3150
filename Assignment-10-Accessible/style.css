@@ -1,0 +1,173 @@
+/* style.css */
+
+.grid-container {
+
+  display: grid;
+
+  grid-template-columns: [col1] 30% [col2] 40% [col3] 30% [col4];
+  grid-template-rows: [row1] 20% [row2] 10% [row3] auto [row4] 20% [row5];
+
+  grid-template-areas:
+    "header header header"
+    "nav nav nav"
+    "aside1 main aside2"
+    "footer footer footer";
+
+  grid-gap: 0.5rem;
+
+  max-width: 1200px;
+
+  justify-content: center;
+
+  margin: 0 auto;
+  /* This is to center the content */
+
+  padding: 0 15px;
+  /* This is to push the content in when the page is smaller -- first number is top and bottom second is the right and left */
+
+}
+
+
+header {
+  background-color: aqua;
+  grid-area: header;
+}
+
+nav {
+
+  text-align: center;
+  background-color: lightsalmon;
+  grid-area: nav;
+
+}
+
+main {
+  background-color: lightblue;
+  grid-area: main;
+
+}
+
+.aside1 {
+
+  background-color: lightgrey;
+  grid-area: aside1;
+
+}
+
+.aside2 {
+
+  background-color: lightgrey;
+  grid-area: aside2;
+
+}
+
+footer {
+
+  background-color: lightgreen;
+  grid-area: footer;
+
+}
+
+@media only screen and (max-width:550px){
+  .grid-container{
+    grid-template-columns: [col1] 100% [col2];
+    grid-template-rows: [row1] auto [row2] auto [row3] auto [row4] auto [row5] auto [row6] auto [row7];
+    grid-template-areas:
+      "header"
+      "nav"
+      "main"
+      "aside1"
+      "aside2"
+      "footer";
+  }
+}
+
+
+
+
+nav ul {
+
+  /* border-radius: 0; */
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+main ul {
+  border: 2px solid black;
+
+}
+
+
+
+
+h1 {
+  font-family: 'Audiowide';
+  color: purple;
+}
+
+nav {
+  font-family: 'Audiowide';
+}
+
+h2, strong {
+  color: magenta;
+}
+
+p {
+  color: blueviolet;
+}
+
+ol {
+  border: 2px solid black;
+}
+
+
+
+ol, ul {
+  padding: 30px 40px;
+  border-radius: 4px;
+  color: blueviolet;
+}
+
+
+em {
+  color: gray;
+}
+
+
+
+
+
+
+header,
+footer {
+  text-align: center;
+}
+
+nav {
+  padding: .5em;
+}
+
+header,
+main,
+aside,
+footer {
+  padding: 2em;
+
+}
+
+header,
+nav,
+main,
+aside,
+footer {
+  border: 1px black solid;
+}
+
+body {
+  background: rgb(240, 239, 199);
+  font-family: 'Trirong';
+  font-size: 16px;
+}
